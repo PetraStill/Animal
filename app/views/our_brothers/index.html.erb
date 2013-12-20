@@ -4,6 +4,7 @@
 			<th>id</th>
 			<th>name</th>
 			<th>description</th>
+			<th>action</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -11,8 +12,19 @@
 		<tr>
 			<td><%= o.id %></td>
 			<td><%= o.name %></td>
-			<td><%= o.qualities.map(&:description).join(",") %></td>
+			<td>
+				<table>
+					<% o.qualities.each do |q| %>
+						<tr>
+							<td><%= image_tag q.image, width: "200" %></td>
+							<td><%= q.name %></td>
+							<td width="400"><%= q.description %></td>
+						</tr>
+					<% end %>
+				</table>
+			</td>
 		</tr>
 	<% end %>
 	</tbody>
 </table>
+<%= link_to "add", new_quality_path %>

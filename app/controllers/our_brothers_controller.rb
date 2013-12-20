@@ -1,5 +1,7 @@
 class OurBrothersController < ApplicationController
 	def index
-		@ourbrothers = OurBrother.all
+		@ourbrothers = OurBrother.find(:all, include: :qualities)
 	end
+
+
 end

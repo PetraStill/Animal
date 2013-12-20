@@ -4,6 +4,7 @@ class CreateQualities < ActiveRecord::Migration
       t.integer :ourbrother_id
       t.text :description
       t.string :image
+      t.string :name
 
       t.timestamps
     end

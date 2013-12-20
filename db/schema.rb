@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20131218151807) do
     t.integer  "ourbrother_id"
     t.text     "description"
     t.string   "image"
+    t.string   "name"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
